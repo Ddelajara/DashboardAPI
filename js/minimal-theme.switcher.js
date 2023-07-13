@@ -30,9 +30,9 @@ const themeSwitcher = {
       return this._scheme;
     },
   
-    // Preferred color scheme
+    // Preferred color scheme - se fija en dark DDLJ
     get preferredColorScheme() {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
     },
   
     // Init switchers
