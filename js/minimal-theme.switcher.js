@@ -32,7 +32,7 @@ const themeSwitcher = {
   
     // Preferred color scheme
     get preferredColorScheme() {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "dark";
     },
   
     // Init switchers
