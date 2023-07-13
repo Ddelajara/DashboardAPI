@@ -77,7 +77,7 @@ const themeSwitcher = {
     // Store scheme to local storage
     schemeToLocalStorage() {
       if (typeof window.localStorage !== "undefined") {
-        window.localStorage.setItem(this.localStorageKey, this.scheme);
+        window.localStorage.setItem(this.localStorageKey, "dark");
       }
     },
   };
