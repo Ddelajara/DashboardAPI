@@ -56,7 +56,7 @@
       </hgroup>
       <!-- <SELECT> -->
         <label for="select">Seleccione Indicador a Consultar</label>
-        <select id="select" name="select" required onchange="SelecIndicador(event)" class="ancho-select">
+        <select id="select" name="select" required class="ancho-select">
           <option value="uf" selected>Performance UF</option>
           <option value="dolar">Performance Dolar Observado</option>
           <option value="utm">Performance UTM</option>
@@ -147,10 +147,14 @@
     <!-- CDN Libreria CHART.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Desarrollo Local Api -->
-    <script src="js/api.js"></script>
 
-    <!-- Minimal theme switcher -->
+    <!-- Desarrollo Local Api -->
+    <script src="js/api.js" type="module"></script>
+
+    <!-- Desarrollo Local Selector -->
+    <script src="js/Selector.js"></script>
+
+        <!-- Minimal theme switcher -->
     <script src="js/minimal-theme.switcher.js"></script>
 
     <!-- Modal -->
