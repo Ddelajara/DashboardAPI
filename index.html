@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafico HTML</title>
+    <link rel="stylesheet" href="css/minimal_local.css"/>
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/local.css">
+  </head>
+  <body>
+
+    <header class="container">
+      <hgroup>
+        <h1>Dashboard de Indicadores Financieros</h1>
+        <p>Este es un servicio open source (web service) que entrega los principales indicadores económicos para Chile en formato JSON. Tanto los indicadores diarios como históricos para que desarrolladores puedan utilizarlos en sus aplicaciones o sitios web.</p>
+      </hgroup>
+      <!-- <nav>
+        <ul>
+          <li>
+            <details role="list">
+              <summary aria-haspopup="listbox" role="button" class="secondary">Theme</summary>
+              <ul role="listbox">
+                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li><a href="#" data-theme-switcher="light">Light</a></li>
+                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav> -->
+    </header>
+    <!-- ./ Header -->
+    <main class="container">
+      <div class="grid">
+        <article class="card">
+          <p class="card-description">UF del Día.</p>
+          <h4 id="vUf" class="card-title">38.990</h4>
+       </article>
+       <article class="card">
+        <p class="card-description">Dolar del Día.</p>
+        <h4 id="vDolar" class="card-title">817,03</h4>
+       </article>
+       <article class="card">
+          <p class="card-description">UTM del Día.</p>
+          <h4 id="vUtm" class="card-title">56.000</h4>
+       </article>
+      </div>
+      <hgroup>
+        <h1>Gráfico de Indicadores</h1>
+        <p>
+          <a href="https://mindicador.cl/">mindicador.cl</a> La aplicación mapea constantemente el sitio del Banco Central de Chile manteniendo así nuestra base de datos actualizada con los últimos valores del día.
+
+          En la lista se selecciona el indicador que se desea consultar y se actualizará un gráfico basado en la librería Chart.js.
+        </p>
+      </hgroup>
+      <!-- <SELECT> -->
+        <label for="select">Seleccione Indicador a Consultar</label>
+        <select id="select" name="select" required onchange="SelecIndicador(event)" class="ancho-select">
+          <option value="uf" selected>Performance UF</option>
+          <option value="dolar">Performance Dolar Observado</option>
+          <option value="utm">Performance UTM</option>
+          <option value="ipc">Performance IPC</option>
+          <option value="imacec">Performance IMACEC</option>
+          <option value="tasa_desempleo">Performance Tasa desempleo</option>
+          <option value="libra_cobre">Performance libra de cobre</option>
+          <option value="bitcoin">Performance bitcoin</option>
+          <option value="euro">Performance euro</option>
+        </select>
+    <!-- </SELECT> -->
+
+
+      <div id="chartContainer">
+        <section id="loading">
+          <!-- <button aria-busy="true">Please wait…</button> -->
+          <article aria-busy="true"></article>
+        </section>
+        <canvas id="myChart"></canvas>
+      </div>
+      <br>
+      <br>
+
+      <!-- Tables -->
+      <section id="tables">
+        <h2>Tables</h2>
+        <figure>
+          <table role="grid">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+      </section>
+      <!-- ./ Tables -->
+
+
+    </main>
+
+     <!-- Footer -->
+     <footer class="container">
+      <small
+        >Built with <a href="https://picocss.com">Pico</a> •
+        <a href="https://github.com/picocss/examples/blob/master/v1-preview/index.html"
+          >Source code</a
+        ></small
+      >
+    </footer>
+    <!-- ./ Footer -->
+
+    <!-- CDN Libreria CHART.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Desarrollo Local Api -->
+    <script src="js/api.js"></script>
+
+    <!-- Minimal theme switcher -->
+    <script src="js/minimal-theme.switcher.js"></script>
+
+    <!-- Modal -->
+    <script src="js/modal.js"></script>
+
+    <!-- Libreria Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>

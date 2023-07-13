@@ -1,0 +1,43 @@
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Separa las tarjetas proporcionalmente */
+}
+
+  .card {
+    width: 70%; /* Ajusta el ancho de las tarjetas según tus necesidades */
+    height: 60%; /* Ajusta la altura de las tarjetas según tus necesidades */
+    text-align: center; /* Alineación del texto al centro */
+    margin-top: 0px;
+    border-color:var(--mark-color);
+    border-style:groove;
+  }
+
+  .card-title {
+    font-size: 150%; /* Tamaño de fuente para el título */
+    color: blanchedalmond;
+    margin-top: 0px;
+    background-color:var(--mark-color);
+  }
+  
+  .card-description {
+    margin-bottom: 1px; /* Ajusta el margen inferior según tus necesidades */
+    background-color:black;
+  }
+  
+  .color1{
+    background-color: aquamarine;
+  }
+
+  .color2{
+    background-color:brown;
+  }
+
+
+  main {
+    /* Estilos para todos los elementos <main> */
+    margin-top: 0px;
+  }
+
+  .ancho-select {
+    width: 350px; /* Establece el ancho deseado */
+  }
